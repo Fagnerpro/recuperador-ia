@@ -1,63 +1,71 @@
-# README.md
+# 💡 Recuperador IA
 
-## 💡 Recuperador IA — Projeto Final SENAI
+Aplicação desenvolvida com **Streamlit**, **MongoDB** e **OpenRouter API** para responder perguntas com base em dados armazenados. Projeto da disciplina **IA Aplicada à Recuperação de Informação** — SENAI.
 
-Este projeto implementa uma aplicação de recuperação de informações utilizando **Streamlit**, **MongoDB** e uma **LLM via OpenRouter.ai**.
-
----
-
-### 🚀 Funcionalidades
-- Entrada de pergunta via interface web
-- Consulta à base de dados NoSQL (MongoDB)
-- Envio de pergunta + contexto para uma LLM
-- Exibição da resposta gerada pela IA
+![Interface](https://raw.githubusercontent.com/Fagnerpro/recuperador-ia/main/assets/print_interface.png)
 
 ---
 
-### 🧰 Tecnologias Utilizadas
-- Python + Streamlit
-- MongoDB Atlas
-- OpenRouter (modelo mistralai/mistral-7b-instruct)
+## 🚀 Funcionalidades
+
+- Entrada de pergunta manual ou seleção sugerida
+- Busca de contexto em MongoDB Atlas com regex
+- Envio de pergunta + contexto à LLM via OpenRouter
+- Geração de resposta textual em linguagem natural
+- Visualização do contexto utilizado
+- 📥 Botão para baixar resposta individual
+- 🗂️ Exportação do histórico completo de interações
+- 🧹 Botão para limpar histórico de sessão
+- 🔁 Resposta simulada se a API falhar
 
 ---
 
-### 📦 Instalação Local
+## 🧰 Tecnologias Utilizadas
 
-1. Clone este repositório
+| Ferramenta | Finalidade |
+|-----------|------------|
+| Streamlit | Interface web |
+| MongoDB Atlas | Base de dados NoSQL |
+| OpenRouter API | Acesso a modelo LLM (Mistral-7B) |
+| Python | Lógica e integração |
+
+---
+
+## 📦 Instalação Local
+
 ```bash
-git clone https://github.com/seuusuario/recuperador-ia.git
+git clone https://github.com/Fagnerpro/recuperador-ia.git
 cd recuperador-ia
-```
-
-2. Instale as dependências
-```bash
 pip install -r requirements.txt
 ```
 
-3. Configure as variáveis de ambiente
-Crie um arquivo `.env` com o conteúdo:
+Crie um arquivo `.env`:
+
 ```env
-OPENROUTER_API_KEY=sua_chave_api_aqui
+MONGO_URI=mongodb+srv://<usuario>:<senha>@cluster.mongodb.net/?retryWrites=true&w=majority
+OPENROUTER_API_KEY=sk-or-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-4. Rode a aplicação
+Execute o app:
 ```bash
 streamlit run app.py
 ```
 
 ---
 
-### 🌐 MongoDB Atlas
-- Crie uma base chamada `base_ia` com a coleção `documentos`
-- Importe o arquivo `dataset_exemplo.json`
+## ☁️ Deploy no Streamlit Cloud
+
+1. Acesse https://streamlit.io/cloud e conecte ao GitHub
+2. Crie novo app apontando para `Fagnerpro/recuperador-ia`, branch `main`, arquivo `app.py`
+3. Vá em **Settings > Secrets** e configure:
+
+```toml
+MONGO_URI = "sua_string_de_conexao"
+OPENROUTER_API_KEY = "sua_chave_openrouter"
+```
 
 ---
 
-### 🌍 OpenRouter
-- Crie uma conta gratuita em https://openrouter.ai
-- Copie sua chave de API e insira no `.env`
+## 📄 Licença
 
----
-
-### 📄 Licença
-Este projeto é livre para fins educacionais. Desenvolvido como parte do curso **IA Aplicada à Recuperação de Informação — SENAI Goiás**.
+Projeto de uso educacional, distribuído livremente para fins de aprendizagem e demonstração técnica.

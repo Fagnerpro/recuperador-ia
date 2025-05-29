@@ -27,6 +27,11 @@ pergunta = pergunta_manual if pergunta_manual else pergunta_sugerida
 if 'historico' not in st.session_state:
     st.session_state.historico = []
 
+# Botão para limpar histórico
+if st.button("🧹 Limpar Histórico"):
+    st.session_state.historico = []
+    st.success("Histórico limpo com sucesso.")
+
 if pergunta:
     with st.spinner("Consultando base de dados e gerando resposta..."):
         contexto = buscar_contexto(pergunta)
