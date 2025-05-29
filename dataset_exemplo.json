@@ -1,0 +1,29 @@
+[
+  {
+    "conteudo": "A inteligência artificial é uma área da ciência da computação que se dedica a criar sistemas capazes de simular a inteligência humana."
+  },
+  {
+    "conteudo": "Machine learning é um subconjunto da inteligência artificial que utiliza algoritmos para aprender com dados e tomar decisões."
+  },
+  {
+    "conteudo": "O MongoDB é uma solução de banco de dados NoSQL amplamente utilizada para armazenar dados em formato de documentos JSON."
+  },
+  {
+    "conteudo": "O Streamlit permite a criação rápida de interfaces web para aplicações de ciência de dados em Python."
+  },
+  {
+    "conteudo": "A recuperação de informação envolve técnicas para localizar conteúdos relevantes em grandes volumes de dados não estruturados."
+  },
+  {
+    "conteudo": "O uso de embeddings semânticos permite representar textos em vetores numéricos para busca por similaridade."
+  },
+  {
+    "conteudo": "APIs de modelos de linguagem, como as da OpenAI ou HuggingFace, permitem integrar IA de forma prática a aplicações."
+  },
+  {
+    "conteudo": "O Python é a linguagem de programação mais utilizada em projetos de inteligência artificial devido à sua simplicidade e vasta comunidade."
+  },
+  {
+    "conteudo": "Chatbots baseados em LLMs podem ser usados para atendimento ao cliente, suporte técnico e sistemas educacionais."
+  }
+]
